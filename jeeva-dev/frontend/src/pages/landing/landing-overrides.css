@@ -1,0 +1,117 @@
+/* Import auth page + button styles */
+@import "../../assets/auth.css";
+
+/* ── Base body fix ───────────────────────────────── */
+body.luffu-react-body {
+  width: 100% !important;
+}
+
+/* ── Header scroll hide/show ─────────────────────── */
+body.luffu-react-body[data-page-scrolled-down="true"] .header {
+  opacity: 0;
+  visibility: hidden;
+}
+
+body.luffu-react-body[data-page-scrolled-down="false"]:has(main > .hero:first-child) .header__home-link {
+  color: var(--_color---text);
+}
+
+/* ── Header layout — make room for auth buttons ──── */
+.header__content {
+  display: flex !important;
+  align-items: center !important;
+}
+
+.header__links-wrapper {
+  display: flex !important;
+  align-items: center !important;
+  gap: 0.8rem !important;
+}
+
+/* ── Global resets ───────────────────────────────── */
+@media screen and (max-aspect-ratio: 40 / 29) {
+  .hero-scene-2__avatar-bubble {
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.rich-text > .rich-text__content > .rich-text__rich-text > *:first-child {
+  margin-top: unset;
+}
+
+body.luffu-react-body:has(.waitlist-form--active),
+body.luffu-react-body:has([data-scroll-locking-element="true"]) {
+  overflow: clip;
+}
+
+html {
+  overscroll-behavior: none;
+}
+
+.w-embed::before,
+.w-embed::after {
+  content: unset;
+}
+
+/* ── Hero section fix ────────────────────────────── */
+.hero__timeline {
+  display: none !important;
+}
+
+body.luffu-react-body .header {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 240ms ease-in-out, visibility 240ms ease-in-out !important;
+}
+
+.hero {
+  position: relative !important;
+  overflow: hidden !important;
+  min-height: 100vh !important;
+}
+
+.hero__track {
+  position: relative !important;
+  min-height: 100vh !important;
+  height: 100vh !important;
+  overflow: hidden !important;
+}
+
+.hero__track > [class*="hero-scene-"] {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  display: block !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+  overflow: hidden !important;
+  transition: opacity 600ms ease, visibility 600ms ease !important;
+}
+
+.hero__track > .hero-scene--active {
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: auto !important;
+  z-index: 2 !important;
+}
+
+.hero__track > .hero-scene--inactive {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  z-index: 0 !important;
+}
+
+.hero__track > [class*="hero-scene-"] > div {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.hero-scene-3__description-2 {
+  display: block !important;
+  opacity: 1 !important;
+}

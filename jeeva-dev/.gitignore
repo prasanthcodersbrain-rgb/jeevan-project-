@@ -1,0 +1,12 @@
+
+# Dependencies (any depth)
+node_modules/
+**/node_modules/
+
+# Environment files (any depth)
+.env
+**/.env
+.env.*
+**/.env.*
+
+

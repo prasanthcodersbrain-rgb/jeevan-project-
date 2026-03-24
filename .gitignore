@@ -1,0 +1,7 @@
+node_modules/
+*.log
+.env
+.vscode/
+.DS_Store
+jeeva-dev/frontend/node_modules/
+jeeva-dev/ai_models/
